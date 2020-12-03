@@ -109,9 +109,9 @@ plt.show()
 ####Step3: Test
 
 **(테스트 셋 정확도: 약 97%)**
+    
   
-  
-![title](result5.PNG)
+![title](result5.png)
 
 
 ---
