@@ -156,20 +156,24 @@ plt.show()
 
 <br>
 
-* MTCNN 논문에서 고안된 online hard sample mining을 이용하였으며 
-<br>
-
 #### Step3: Test
 
 * loss의 경우 P-net의 경우에만 classification loss가 0.1 이하로 내려가지 않는 현상이 있었고 나머지 네트워크의 경우 classification loss와 bounding box regression loss가 0.005 이하까지 줄어들었다.
 
 <br>
 
-* 하지만 최종 학습된 모델을 이용해 기존 MTCNN 모델을 테스트 할 때와 똑같이 테스트하였으나, 훨씬 저조한 결과가 나옴.
+* 하지만 최종 학습된 모델을 이용해 기존 MTCNN 모델을 테스트 할 때와 똑같이 테스트하였으나, 훨씬 저조한 결과가 나왔다. 검출해야하는 총 얼굴 수는 926개인데 그 중 374개의 얼굴밖에 찾아내지 못하였고, Precision또한 62%로 살짝 낮았다.
 
 |    True-Positive    |   False-Positive | Precision |
 |:------------:|:----------------:|:-----------------:|
 |374 |229 |0.62|
+
 <br>
+
+* 이러한 문제가 발생한 이유에는 다음과 같이 두 가지가 있다고 판단했다. 첫째는 MTCNN 모델의 학습의 핵심은 Face detection, Bounding box regression, Face alignment 세 가지 테스크를 동시에 학습시키는 joint learning 방식인데, 추가 학습 과정에서 마지막 테스크를 제외한 점이고, 둘째는 마스크를 쓴 사람의 데이터가 부족했다는 점이다. 
+
+* 기회가 된다면, MTCNN의 학습과정을 개선시키기 위해서 Face detection, Bounding box regression, Face alignment 세 가지 테스크를 동시에 학습시키는 joint learning 방식을 유지하되, 코와 입의 alignment를 제외하고 두 눈의 alignment만을 포함시키는 방법을 사용하여 모델을 구현해보고 싶다.
+
+
 
 ---
