@@ -172,8 +172,22 @@ plt.show()
 
 * 이러한 문제가 발생한 이유에는 다음과 같이 두 가지가 있다고 판단했다. 첫째는 MTCNN 모델의 학습의 핵심은 Face detection, Bounding box regression, Face alignment 세 가지 테스크를 동시에 학습시키는 joint learning 방식인데, 추가 학습 과정에서 마지막 테스크를 제외한 점이고, 둘째는 마스크를 쓴 사람의 데이터가 부족했다는 점이다. 
 
-* 기회가 된다면, MTCNN의 학습과정을 개선시키기 위해서 Face detection, Bounding box regression, Face alignment 세 가지 테스크를 동시에 학습시키는 joint learning 방식을 유지하되, 코와 입의 alignment를 제외하고 두 눈의 alignment만을 포함시키는 방법을 사용하여 모델을 구현해보고 싶다.
+<br>
 
-
+* 이를 해결하기 위해서는 MTCNN의 학습과정을 개선시키기 위해서 Face detection, Bounding box regression, Face alignment 세 가지 테스크를 동시에 학습시키는 joint learning 방식을 유지하되, 코와 입의 alignment를 제외하고 두 눈의 alignment만을 포함시키는 방법을 사용하여 모델을 구현하고, 마스크를 슨 사람의 데이터를 증가시켜야 할 것으로 보인다.
 
 ---
+
+<br>
+
+## Final Result
+
+#### Conclusion
+
+* 기존 계획해두었던 프로젝트의 핵심은 영상 및 사진에서 마스크를 쓴 사람과 쓰지 않은 사람을 구별하여 검출하는 것이었으므로, 앞서 소개된 Classify model과 기존의 MTCNN 모듈로만으로도 수행이 가능했다. 하지만 이전 모델들과의 차별점을 만들어내기 위해서 MTCNN 모델을 재학습 시키는 방법을 선택했으나 좋은 결과를 내지 못했다. 따라서 이를 해결하기 위한 방법에 대해서 생각해 보았다.
+
+<br> 
+
+#### Submission
+
+* 최종 결과물로는 실시간 웹 캠 영상에서 마스크를 쓴 사람과 쓰지 않은 사람을 실시간으로 구별하는 영상/코드를 제출하고자 한다. 
