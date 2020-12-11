@@ -38,4 +38,4 @@ def show_boxes(img_path):
 
 
 # print(find_boxes('test_img.jpg'))
-show_boxes('101d6660a8974050b613dd2e6bd59390_jpg.rf.52e1b68968d7307fab23c6bf5fc3cbbe.jpg')
+show_boxes('1231.jpg')

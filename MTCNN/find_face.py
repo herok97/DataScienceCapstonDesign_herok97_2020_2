@@ -30,7 +30,7 @@ from .tools import detect_face, get_model_filenames
 old_v = tf.logging.get_verbosity()
 tf.logging.set_verbosity(tf.logging.ERROR)
 
-def find_face(img, model_dir = 'MTCNN/save_model/new_saver/', threshold=[0.3, 0.95, 0.95], minsize=40, factor=0.8, save_image=False, save_name="result.jpg"):
+def find_face(img, model_dir = 'MTCNN/save_model/new_saver/', threshold=[0.7, 0.7, 0.7], minsize=40, factor=0.8, save_image=False, save_name="result.jpg"):
     config = tf.ConfigProto()
     config.gpu_options.allow_growth = True
     session = tf.Session(config=config)
