@@ -192,3 +192,4 @@ plt.show()
 #### Submission
 
 * 최종 결과물로는 실시간 웹 캠 영상에서 마스크를 쓴 사람과 쓰지 않은 사람을 실시간으로 구별하는 영상/코드를 제출하고자 한다. 
+발표영상 - https://drive.google.com/file/d/15vP7jxt7RdKpHIQyghJf3DFukPbYSqBw/view?usp=sharing
