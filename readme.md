@@ -6,6 +6,16 @@
 
 ---
 
+## File Overview
+
+root 폴더에 있는 cal_TP_FP.py 는 precision을 구하기 위한 코드입니다.
+
+test_model_with_img.py 파일과 test_model_with_video.py 는 각각 이미지와 비디오에서 검출영역에 바운딩 박스를 그려주는 코드입니다.
+
+Classification 폴더 내에는 모델 학습 과정에 사용된 코드와 classification을 수행하여 표시를 해주는 코드인 classify_face.py가 존재합니다. 모델이 저장된 파일같은 경우 용량이 100MB를 초과하여 업로드하지 못하였습니다.
+
+MTCNN 폴더 내에는 기존의 MTCNN 모델을 추가학습 시킨 모델 가중치 파일과 이미지에서 얼굴 영역을 찾아 좌표값을 반환하는 코드인 find_face.py가 존재합니다.
+
 
 ## Project Overview
 
